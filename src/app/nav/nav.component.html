@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">My Blog</a>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn" [routerLink]="['/home']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="!isLoggedIn" [routerLink]="['/login']">Sign in</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="!isLoggedIn" [routerLink]="['/register']">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn" [routerLink]="['/create']">Create Post</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn" [routerLink]="['/list']">All Posts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" *ngIf="isLoggedIn" (click)="signoutFn()" [routerLink]="['/login']">Sign Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>

@@ -1,0 +1,19 @@
+<div class="card" style="width: 40rem; margin:0 auto">
+  <div class="card-header bg-info text-white">
+    <h2>Create Post</h2>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="title">Title</label>
+        <input type="text" name="title" class="form-control" id="title" placeholder="Enter Title here..." [(ngModel)]="newPost.title"
+          required autofocus>
+    </div>
+    <div class="form-group">
+      <label for="content">Content</label>
+        <textarea type="text" name="content" cols="10" class="form-control" id="content" placeholder="Enter Title here..." [(ngModel)]="newPost.content"></textarea>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="createPost()">Create</button>
+    </div>
+  </div>
+</div>

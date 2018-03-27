@@ -1,0 +1,27 @@
+<div *ngIf="user">
+
+  <h1>Hi {{user.firstname}}&nbsp;{{user.lastname}}</h1>
+  <br><br>
+  <div class="card">
+    <div class="card-header  bg-info">
+      <h2>Your Posts</h2>
+    </div>
+
+    <div class="card-body">
+      <table class="table table-bordered">
+        <thead class="thead">
+          <th>Post Title :</th>
+          <th>Time :</th>
+          <th>View</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let blog of allBlogs">
+            <td>{{blog.title}}</td>
+            <td>{{blog.created_at | date:'medium'}}</td>
+            <td><button class="btn btn-info" (click)="viewMoreFn(blog._id)">View More</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

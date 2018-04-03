@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Cross component communication using @Input, @Output, Subjects of RxJS
 4. Routing
 5. HttClient for http requests and responses 
-6. HttpInterceptor for manipulating requests going to backend
+6. ##### HttpInterceptor for manipulating requests going to backend
 7. Authentication and Cookie Service (for storing auth token)
 8. NodeJS, along with ExpressJS middleware
 9. JWT for authentiction
